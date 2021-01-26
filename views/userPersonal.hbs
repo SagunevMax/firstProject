@@ -1,0 +1,16 @@
+<h2>{{userName}}</h2>
+
+<h2>Найти продукт по названию</h2>
+<form name="findForm" action="/user/find" method="POST">
+  <input type="text" placeholder="название продукта" name="findProduct" required>
+  <button type="submit">поиск</button>
+</form>
+
+{{!--
+<script defer src="../public/script.js"></script> --}}
+<p>ваши продукты в резерве</p>
+{{#each user.productReserve}}
+<li>{{this.productName}}</li>
+<li>Дата просрочки--{{this.expirationDate}}</li>
+<hr><br>
+{{/each}}

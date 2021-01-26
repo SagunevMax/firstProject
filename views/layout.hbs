@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  {{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaulXMWxvNgm7tYBZX7V7F-gGjwPFs5OE&libraries=&v=weekly"
+   ></script> --}}
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaulXMWxvNgm7tYBZX7V7F-gGjwPFs5OE&libraries=places&v=weekly"></script>
+
+  <title>Document</title>
+</head>
+<header>
+  <div class="topnav">
+    {{#if shopName}}
+    <a class="active" href="/">Home</a>
+    <a href="/shop/logout">Log out</a>
+    <a href="/shop/personal">Shop profile</a>
+    <a href="/shop/products">Add products</a>
+    {{shopName}}
+
+ {{else }}
+    <a class="active" href="/">Home</a>
+    <a href="/user/register">Register of user</a>
+    <a href="/user/signin">Log of user</a>
+    <a href="/shop/register">Register of shop</a>
+    <a href="/shop/signin">Log in shop</a>
+    <a href="#about">Maps</a>
+    {{/if}}
+
+    {{#if userName}}
+    <a class="active" href="/">Home</a>
+    <a href="/shop/logout">Log out</a>
+    <a href="/user/personal">User profile</a>
+    {{userName}}
+    {{/if}}
+
+
+  </div>
+</header>
+
+
+<body>
+  {{{body}}}
+</body>
+
+</html>

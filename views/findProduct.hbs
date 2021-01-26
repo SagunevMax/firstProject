@@ -1,0 +1,12 @@
+{{!-- {{find}} --}}
+<form>
+  <div>
+  <p>{{find.productName}}</p>
+  <p>{{find.expirationDate}}</p>
+  <p>{{find.reserve}}</p>
+  {{#each find.shops}}
+  <a href="/user/find/{{this._id}}"><li>{{this.shopName}}</li></a>
+  {{/each}}
+</div>
+
+</form>

@@ -1,0 +1,22 @@
+<h3>{{shop.shopName}}</h3>
+<h3>{{shop.adress}}</h3>
+
+
+
+<h2>Продукты которые вы добавили</h2>
+<ul>
+  {{#each shop.listOfProduts}}
+  <form action="/shop/find/product/{{this._id}}" method="POST">
+  <li>{{this.productName}}</li>
+  <li>Дата просрочки--{{this.expirationDate}}</li>
+  <button type="submit">удалить из добавленных</button>
+  <hr><br>
+  </form>
+  {{/each}}
+
+{{!-- <form action="/user/find/product/{{this._id}}" method="POST">
+  <li>{{this.productName}}</li>
+  <li>Дата просрочки--{{this.expirationDate}}</li>
+  <button type="submit">забронировать</button>
+</form>
+  {{/each}} --}}

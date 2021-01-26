@@ -1,0 +1,14 @@
+<h3>{{shop.shopName}}</h3>
+<h3>{{shop.adress}}</h3>
+
+<form action="/shop/personal" method="POST">
+
+  <label><b>Name of product</b></label>
+  <input type="text" placeholder="Enter name of product" name="productName" required>
+  <hr>
+  <label><b>expiration date</b></label>
+  <input type="date" placeholder="Enter expiration date" name="expirationDate" required>
+  <button type="submit" class="addProduct">Добавить продукт</button>
+</form>
+
+

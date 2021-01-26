@@ -1,0 +1,35 @@
+<h1>Shop of Produts</h1>
+
+<style>
+  #map {
+    height: 400px;
+    width: 50%;
+  }
+</style>
+<div id="map"></div>
+
+<script>
+  function initMap() {
+    let pos = { lat: 55.738426, lng: 37.629087 };
+    let opt = {
+      center: pos,
+      zoom: 12,
+    };
+    let map = new google.maps.Map(document.getElementById("map"), opt);
+    let marker = new google.maps.Marker({
+      map: map,
+      position: pos,
+    });
+    // let info = new.google.maps.InfoWindow({
+    //   content: "<h3>this place</h3><p>place info</p>",
+    // });
+
+    // marker.addListener("click", function () {
+    //   info.open(map, marker);
+    // });
+  }
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaulXMWxvNgm7tYBZX7V7F-gGjwPFs5OE&callback=initMap&libraries=&v=weekly"
+  async defer></script>
